@@ -70,7 +70,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 document.querySelector("#slider").addEventListener("input", function() {
 	video.volume = this.value / 100;  // Adjust volume according to slider value
 	document.querySelector("#volume").textContent = this.value + "%";
-	console.log("Volume is: " + this.value);
+	console.log("Volume is: " + this.value + "%");
 });
 
 // Applying old school style
