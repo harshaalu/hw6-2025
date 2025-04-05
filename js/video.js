@@ -73,6 +73,12 @@ document.querySelector("#slider").addEventListener("input", function() {
 	console.log("Volume is: " + this.value + "%");
 });
 
+// Ensure initial volume display when page loads
+window.addEventListener("load", function() {
+    var initialVolume = document.querySelector("#slider").value;  // Assuming the slider has a default value set
+    document.querySelector("#volume").textContent = initialVolume + "%";  // Set the initial volume display with %
+});
+
 // Applying old school style
 document.querySelector("#vintage").addEventListener("click", function() {
 	video.classList.add("oldSchool");
