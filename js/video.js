@@ -19,6 +19,10 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
+	// Update volume display when play button is clicked
+    var currentVolume = document.querySelector("#slider").value;
+    document.querySelector("#volume").textContent = currentVolume + "%";
+    console.log("Volume updated on play: " + currentVolume + "%");
 });
 
 // Pausing the video
