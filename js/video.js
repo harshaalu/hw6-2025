@@ -13,6 +13,10 @@ window.addEventListener("load", function() {
     // Making sure looping is off
     video.loop = false;
     console.log("Looping is set to: " + video.loop);
+
+	document.querySelector("#slider").value = video.volume * 100;
+    document.querySelector("#volume").textContent = video.volume * 100 + "%";
+    console.log("Initial volume set to: " + video.volume * 100 + "%");
 });
 
 // Playing the video
